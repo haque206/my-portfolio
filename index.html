@@ -51,7 +51,16 @@
     .btn-primary { background:var(--accent); color:#071020; }
     .btn-secondary { border-color:var(--line); background:rgba(255,255,255,.03); }
     .profile-card { border:1px solid var(--line); border-radius:24px; padding:28px; background:linear-gradient(145deg, rgba(120,169,255,.13), rgba(116,224,193,.05)); box-shadow:0 24px 70px rgba(0,0,0,.22); }
-    .monogram { width:72px; height:72px; border-radius:20px; display:grid; place-items:center; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#071020; font-size:1.65rem; font-weight:900; }
+    .profile-photo {
+      display: block;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 25%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
     .profile-card h2 { margin:18px 0 4px; font-size:1.4rem; }
     .profile-card p { margin:0; color:var(--muted); }
     .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
@@ -110,7 +119,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#home" aria-label="Yousuf Haque home">YH<span>.</span> Portfolio</a>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
       <nav id="mainNav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -134,7 +143,7 @@
           </div>
         </div>
         <aside class="profile-card" aria-label="Profile summary">
-          <div class="monogram" aria-hidden="true">YH</div>
+          <img src="portfolio.jpg" alt="Illustrated profile portrait of Yousuf Haque" class="profile-photo" width="120" height="120">
           <h2>Yousuf Haque</h2>
           <p>Affiliate Marketing · CPA · SEO</p>
           <div class="chips">
@@ -237,12 +246,11 @@
             <h2>Let’s connect professionally.</h2>
             <p>For legitimate affiliate marketing discussions, collaboration, or portfolio inquiries.</p>
             <p style="margin-top:10px"><strong>Telegram:</strong>
-              <p style="margin-top:10px">
-  <strong>Email:</strong>
-  <a href="mailto:haqueyousuf206@gmail.com">
-    haqueyousuf206@gmail.com
-  </a>
-</p>@haque206</p>
+              <a href="https://t.me/haque206" target="_blank" rel="noopener noreferrer">@haque206</a>
+            </p>
+            <p style="margin-top:10px"><strong>Email:</strong>
+              <a href="mailto:haqueyousuf206@gmail.com">haqueyousuf206@gmail.com</a>
+            </p>
           </div>
           <a class="btn btn-primary" href="https://t.me/haque206" target="_blank" rel="noopener noreferrer">Message me on Telegram ↗</a>
         </div>
