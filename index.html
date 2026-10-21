@@ -3,283 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yousuf Haque's digital marketing portfolio: CPA and affiliate marketing, SEO, content strategy, audience research, and landing page concepts.">
-  <meta name="theme-color" content="#0b1020">
-  <title>Yousuf Haque | Digital Marketing Portfolio</title>
+  <meta name="description" content="Yousuf Haque's portfolio in digital marketing, affiliate marketing fundamentals, SEO content planning, audience research, and landing page concepts.">
+  <meta name="theme-color" content="#080d19">
+  <meta property="og:title" content="Yousuf Haque | Digital Marketing Portfolio">
+  <meta property="og:description" content="Digital marketing concepts, SEO content planning, audience research, and landing page practice.">
+  <title>Yousuf Haque — Digital Marketing Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0b1020;
-      --panel: #111a2e;
-      --panel2: #151f36;
-      --text: #edf2ff;
-      --muted: #a8b3cc;
-      --accent: #78a9ff;
-      --accent2: #74e0c1;
-      --line: rgba(255,255,255,.11);
-      --radius: 18px;
-      --max: 1120px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
-    body {
-      margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: radial-gradient(ellipse at top right, rgba(75,105,190,.16), transparent 38%), var(--bg);
-      color: var(--text); line-height: 1.65;
-    }
-    a { color: inherit; text-decoration: none; }
-    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-    header {
-      position: sticky; top: 0; z-index: 20; backdrop-filter: blur(16px);
-      background: rgba(11,16,32,.88); border-bottom: 1px solid var(--line);
-    }
-    .nav { min-height: 72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand { font-weight: 800; letter-spacing: -.03em; white-space: nowrap; }
-    .brand span { color: var(--accent); }
-    nav { display:flex; align-items:center; gap:22px; }
-    nav a { font-size:.9rem; color:var(--muted); transition:color .2s; }
-    nav a:hover, nav a:focus { color:var(--text); }
-    .menu-btn { display:none; border:1px solid var(--line); background:var(--panel); color:var(--text); padding:8px 12px; border-radius:10px; cursor:pointer; }
-    .hero { padding:100px 0 76px; }
-    .hero-grid { display:grid; grid-template-columns:1.25fr .75fr; align-items:center; gap:52px; }
-    .eyebrow { color:var(--accent2); font-size:.78rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
-    h1 { font-size:clamp(2.5rem, 6vw, 4.6rem); line-height:1.08; letter-spacing:-.055em; margin:16px 0 22px; }
-    h1 .highlight { color:var(--accent); }
-    .lead { font-size:1.13rem; color:var(--muted); max-width:650px; }
-    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:12px; font-weight:750; border:1px solid transparent; transition:transform .2s, background .2s; }
-    .btn:hover { transform:translateY(-2px); }
-    .btn-primary { background:var(--accent); color:#071020; }
-    .btn-secondary { border-color:var(--line); background:rgba(255,255,255,.03); }
-    .profile-card { border:1px solid var(--line); border-radius:24px; padding:28px; background:linear-gradient(145deg, rgba(120,169,255,.13), rgba(116,224,193,.05)); box-shadow:0 24px 70px rgba(0,0,0,.22); }
-    .profile-photo {
-      display: block;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 25%;
-      border: 3px solid var(--accent);
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
-    }
-    .profile-card h2 { margin:18px 0 4px; font-size:1.4rem; }
-    .profile-card p { margin:0; color:var(--muted); }
-    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-    .chip { font-size:.78rem; color:#dbe6ff; border:1px solid var(--line); background:rgba(255,255,255,.04); padding:6px 10px; border-radius:999px; }
-    section { padding:74px 0; }
-    .section-head { max-width:720px; margin-bottom:32px; }
-    .section-head h2 { font-size:clamp(1.8rem,4vw,2.7rem); letter-spacing:-.04em; line-height:1.2; margin:10px 0 12px; }
-    .section-head p { color:var(--muted); margin:0; }
-    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    .grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
-    .card { border:1px solid var(--line); background:linear-gradient(180deg,var(--panel),rgba(17,26,46,.72)); border-radius:var(--radius); padding:23px; }
-    .card .icon { font-size:1.45rem; }
-    .card h3 { margin:12px 0 8px; font-size:1.08rem; }
-    .card p, .card li { color:var(--muted); font-size:.94rem; }
-    .card p { margin:0; }
-    .tag { display:inline-block; margin-top:14px; color:var(--accent2); font-size:.75rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; }
-    .about-layout { display:grid; grid-template-columns:.8fr 1.2fr; gap:30px; align-items:start; }
-    .note { border-left:3px solid var(--accent2); padding:14px 18px; background:rgba(116,224,193,.06); border-radius:0 12px 12px 0; color:var(--muted); }
-    .project-top { display:flex; justify-content:space-between; gap:12px; align-items:start; }
-    .project-number { color:var(--accent); font-weight:900; font-size:.8rem; }
-    .project-card ul { padding-left:18px; margin:12px 0 0; }
-    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; counter-reset:step; }
-    .step { position:relative; padding:20px; border:1px solid var(--line); border-radius:16px; background:var(--panel); }
-    .step:before { counter-increment:step; content:"0" counter(step); color:var(--accent2); font-weight:900; font-size:.78rem; }
-    .step h3 { margin:8px 0; font-size:1rem; }
-    .step p { margin:0; color:var(--muted); font-size:.9rem; }
-    .contact-box { display:flex; align-items:center; justify-content:space-between; gap:24px; border:1px solid rgba(120,169,255,.28); background:linear-gradient(120deg,rgba(120,169,255,.12),rgba(116,224,193,.06)); padding:30px; border-radius:24px; }
-    .contact-box h2 { margin:0 0 8px; font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.04em; }
-    .contact-box p { margin:0; color:var(--muted); }
-    footer { border-top:1px solid var(--line); padding:25px 0; color:var(--muted); font-size:.85rem; }
-    footer .foot { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
-    .disclaimer { font-size:.82rem; color:var(--muted); margin-top:18px; }
-    :focus-visible { outline:3px solid var(--accent2); outline-offset:3px; }
-    @media (max-width: 850px) {
-      .hero-grid, .about-layout { grid-template-columns:1fr; }
-      .hero { padding-top:68px; }
-      .grid-3 { grid-template-columns:repeat(2,1fr); }
-      .steps { grid-template-columns:repeat(2,1fr); }
-      nav { gap:13px; }
-    }
-    @media (max-width: 620px) {
-      .wrap { width:min(var(--max),calc(100% - 28px)); }
-      .nav { min-height:64px; }
-      .menu-btn { display:block; }
-      nav { display:none; position:absolute; top:64px; left:0; right:0; padding:14px 20px 20px; background:#0b1020; border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; }
-      nav.open { display:flex; }
-      .hero { padding:54px 0 48px; }
-      section { padding:54px 0; }
-      .grid-3, .grid-2, .steps { grid-template-columns:1fr; }
-      .contact-box { align-items:flex-start; flex-direction:column; padding:24px; }
-      h1 { font-size:2.7rem; }
-    }
+    :root{color-scheme:dark;--bg:#080d19;--panel:#10192b;--panel2:#121f34;--text:#f2f6ff;--muted:#a3b0c7;--line:rgba(190,211,255,.13);--blue:#83aaff;--mint:#7af0c5;--max:1160px;--radius:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;background:radial-gradient(ellipse at 84% 4%,rgba(75,111,205,.19),transparent 29%),radial-gradient(ellipse at 4% 42%,rgba(54,197,163,.07),transparent 28%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.7}body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 75%)}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin-inline:auto}.skip-link{position:absolute;left:-9999px;top:8px;background:var(--mint);color:#06120f;padding:10px 14px;border-radius:10px;z-index:100}.skip-link:focus{left:12px}header{position:sticky;top:0;z-index:30;background:rgba(8,13,25,.84);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:inline-flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em}.brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:#07101c;background:linear-gradient(135deg,var(--blue),var(--mint));font-size:.9rem;box-shadow:0 8px 24px #83aaff24}.brand-text{font-size:1rem}.brand-text span{color:var(--blue)}nav{display:flex;align-items:center;gap:27px}nav a{font-size:.9rem;color:var(--muted);transition:color .2s}nav a:hover,nav a:focus-visible{color:var(--mint)}.nav-cta{padding:10px 15px;border:1px solid var(--line);border-radius:12px;color:var(--text)}.menu-btn{display:none;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:9px 12px;border-radius:11px;font:inherit;cursor:pointer}.hero{padding:106px 0 84px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:clamp(35px,7vw,88px)}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--mint);font-size:.76rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.eyebrow:before{content:"";width:24px;height:1px;background:currentColor}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(2.9rem,6.4vw,5.6rem);line-height:1.04;letter-spacing:-.075em;margin:22px 0 24px;max-width:760px}.gradient-text{background:linear-gradient(100deg,#8eb3ff 8%,#a4c7ff 45%,#7af0c5 95%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:clamp(1rem,1.6vw,1.14rem);color:var(--muted);max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:31px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 18px;border-radius:13px;font-weight:800;font-size:.92rem;border:1px solid transparent;transition:transform .2s,border-color .2s,background .2s}.btn:hover{transform:translateY(-3px)}.btn-primary{color:#07121b;background:linear-gradient(115deg,var(--blue),var(--mint));box-shadow:0 10px 32px #83aaff20}.btn-secondary{border-color:var(--line);background:rgba(255,255,255,.035)}.btn-secondary:hover{border-color:#83aaff75}.micro-note{font-size:.8rem;color:#8391ab;margin-top:18px}.profile-wrap{position:relative;max-width:390px;margin-inline:auto;width:100%}.profile-wrap:before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid #83aaff38;border-radius:30px;transform:rotate(-5deg)}.profile-card{position:relative;overflow:hidden;padding:30px;border:1px solid var(--line);border-radius:27px;background:linear-gradient(145deg,rgba(19,32,54,.97),rgba(10,17,31,.97));box-shadow:0 35px 90px rgba(0,0,0,.32)}.profile-card:after{content:"";position:absolute;width:200px;height:200px;right:-90px;top:-100px;background:var(--blue);opacity:.11;filter:blur(60px);border-radius:50%}.profile-top{display:flex;align-items:center;gap:17px}.profile-photo{width:100px;height:100px;flex:0 0 100px;object-fit:cover;object-position:center 25%;border-radius:25px;border:1px solid #9bb9ff70;box-shadow:0 8px 25px #0005}.profile-card h2{font:800 1.25rem Manrope,sans-serif;margin:0 0 4px;letter-spacing:-.04em}.profile-card .role{color:var(--muted);font-size:.88rem;margin:0}.available{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--mint);font-size:.75rem;font-weight:700}.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px #7af0c580}.profile-divider{height:1px;background:var(--line);margin:24px 0}.profile-caption{font-size:.82rem;color:var(--muted);margin:0 0 13px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{font-size:.75rem;padding:7px 10px;border-radius:999px;border:1px solid var(--line);background:#ffffff05;color:#dce6fa}.profile-foot{font-size:.77rem;color:#7f8da5;margin:19px 0 0}section{padding:83px 0;position:relative}.section-head{max-width:730px;margin-bottom:35px}.section-head h2{font:800 clamp(2rem,4.5vw,3.25rem)/1.14 Manrope,sans-serif;letter-spacing:-.065em;margin:14px 0}.section-head p{color:var(--muted);margin:0}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}.about-copy p{color:var(--muted);margin-top:0}.note{padding:17px 19px;border:1px solid #7af0c52c;border-left:3px solid var(--mint);border-radius:0 15px 15px 0;background:#7af0c509;color:#b8c6da;font-size:.9rem}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{height:100%;padding:25px;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(155deg,rgba(17,27,46,.92),rgba(12,20,35,.9));transition:transform .22s,border-color .22s,background .22s}.card:hover{transform:translateY(-4px);border-color:#83aaff52;background:linear-gradient(155deg,rgba(22,35,58,.98),rgba(12,20,35,.96))}.card-icon{width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,#83aaff16,#7af0c50d);font-size:1.25rem}.card h3{font:750 1.06rem Manrope,sans-serif;letter-spacing:-.025em;margin:17px 0 8px}.card p,.card li{font-size:.91rem;color:var(--muted)}.card p{margin:0}.tag{display:inline-flex;margin-top:17px;color:var(--mint);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.project-card{display:flex;flex-direction:column}.project-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.project-number{font-size:.74rem;color:var(--blue);font-weight:900;letter-spacing:.12em}.project-type{font-size:.7rem;border:1px solid var(--line);border-radius:999px;padding:4px 9px;color:#c5d1e6}.project-card ul{padding-left:19px;margin:14px 0 0}.project-card li{margin:4px 0}.project-card .tag{margin-top:auto;padding-top:18px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;counter-reset:step}.step{padding:22px;border:1px solid var(--line);border-radius:18px;background:#10192bbd}.step:before{counter-increment:step;content:"0" counter(step);font:800 .8rem Manrope,sans-serif;color:var(--mint);letter-spacing:.1em}.step h3{font:750 1rem Manrope,sans-serif;margin:12px 0 6px}.step p{font-size:.88rem;color:var(--muted);margin:0}.contact-panel{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:clamp(25px,5vw,48px);border:1px solid #83aaff3d;border-radius:28px;background:radial-gradient(ellipse at 100% 0%,#83aaff18,transparent 40%),linear-gradient(125deg,#121e33,#0e1728)}.contact-panel h2{font:800 clamp(2rem,4vw,3rem)/1.12 Manrope,sans-serif;letter-spacing:-.06em;margin:15px 0}.contact-panel p{color:var(--muted);margin:0}.contact-links{display:grid;gap:12px}.contact-link{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--line);border-radius:16px;background:#ffffff04;transition:border-color .2s,transform .2s}.contact-link:hover{border-color:#7af0c566;transform:translateY(-2px)}.contact-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:#83aaff18;font-size:1.15rem;flex:0 0 auto}.contact-meta{min-width:0;flex:1}.contact-label{display:block;color:#8798b3;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.contact-value{display:block;font-weight:700;overflow-wrap:anywhere}.contact-arrow{color:var(--mint);font-size:1.15rem}footer{padding:28px 0;border-top:1px solid var(--line);color:#8290a8;font-size:.82rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-row strong{color:#cbd6e8;font-weight:700}:focus-visible{outline:3px solid var(--mint);outline-offset:4px}::selection{background:#7af0c53b;color:var(--text)}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr .82fr;gap:32px}.profile-card{padding:23px}.profile-top{align-items:flex-start;flex-direction:column}.profile-photo{width:88px;height:88px;flex-basis:88px}.about-grid{gap:28px}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:680px){.wrap{width:min(var(--max),calc(100% - 30px))}.nav{min-height:68px}.menu-btn{display:inline-flex;align-items:center;gap:8px}nav{display:none;position:absolute;left:0;right:0;top:68px;padding:14px 20px 20px;background:#080d19f7;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}nav.open{display:flex}nav a{padding:12px 4px}.nav-cta{border:0;padding:12px 4px}.hero{padding:70px 0 54px}.hero-grid{grid-template-columns:1fr;gap:48px}.hero h1{font-size:clamp(2.8rem,13vw,4.5rem)}.profile-wrap{max-width:420px}.profile-top{flex-direction:row;align-items:center}.profile-photo{width:88px;height:88px;flex-basis:88px}section{padding:62px 0}.about-grid,.contact-panel{grid-template-columns:1fr;gap:23px}.grid-3,.grid-2,.steps{grid-template-columns:1fr}.card{padding:22px}.contact-panel{padding:25px}.footer-row{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#home" aria-label="Yousuf Haque home">YH<span>.</span> Portfolio</a>
-      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
+      <a class="brand" href="#home" aria-label="Yousuf Haque, home"><span class="brand-mark">YH</span><span class="brand-text">Yousuf<span>.</span></span></a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰ <span>Menu</span></button>
       <nav id="mainNav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About</a><a href="#skills">Expertise</a><a href="#projects">Projects</a><a href="#approach">Process</a><a class="nav-cta" href="#contact">Let’s connect ↗</a>
       </nav>
     </div>
   </header>
-
-  <main>
+  <main id="main">
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">Digital marketing portfolio · Bangladesh</div>
-          <h1>Building smarter<br><span class="highlight">digital strategies.</span></h1>
-          <p class="lead">I’m Yousuf Haque, an aspiring affiliate marketer developing practical skills in CPA marketing, audience research, SEO, content strategy, and conversion-focused landing pages.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#projects">Explore my portfolio ↗</a>
-            <a class="btn btn-secondary" href="https://t.me/haque206" target="_blank" rel="noopener noreferrer">Connect on Telegram</a>
-          </div>
+          <div class="eyebrow">Digital marketing · Bangladesh</div>
+          <h1>Thoughtful ideas.<br><span class="gradient-text">Smarter digital</span><br>experiences.</h1>
+          <p class="lead">I’m Yousuf Haque, an aspiring digital marketer building practical skills in affiliate marketing, SEO, audience research, content planning, and conversion-focused landing pages.</p>
+          <div class="actions"><a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="https://t.me/haque206" target="_blank" rel="noopener noreferrer">✈ Connect on Telegram</a></div>
+          <p class="micro-note">Curious by nature. Transparent by principle. Always learning.</p>
         </div>
-        <aside class="profile-card" aria-label="Profile summary">
-          <img src="portfolio.jpg" alt="Illustrated profile portrait" class="profile-photo" width="120" height="120">
-          <h2>Yousuf Haque</h2>
-          <p>Affiliate Marketing · CPA · SEO</p>
-          <div class="chips">
-            <span class="chip">Audience Research</span>
-            <span class="chip">Content Strategy</span>
-            <span class="chip">Landing Pages</span>
-            <span class="chip">Ethical Promotion</span>
+        <aside class="profile-wrap" aria-label="Profile summary">
+          <div class="profile-card">
+            <div class="profile-top"><img src="portfolio.jpg" alt="Portrait of Yousuf Haque" class="profile-photo" width="100" height="100"><div><h2>Yousuf Haque</h2><p class="role">Digital Marketing Learner</p><span class="available"><span class="dot"></span> Open to learning & collaboration</span></div></div>
+            <div class="profile-divider"></div><p class="profile-caption">Currently exploring</p>
+            <div class="chips"><span class="chip">Affiliate Marketing</span><span class="chip">SEO Content</span><span class="chip">Audience Research</span><span class="chip">Landing Pages</span><span class="chip">Ethical Promotion</span></div>
+            <p class="profile-foot">A growing portfolio of learning and clearly labelled concept projects.</p>
           </div>
-          <p class="disclaimer">Portfolio of learning and concept work. Project examples are clearly identified as practice projects.</p>
         </aside>
       </div>
     </section>
-
-    <section id="about">
-      <div class="wrap about-layout">
-        <div class="section-head">
-          <div class="eyebrow">About me</div>
-          <h2>Curious, strategic, and focused on learning by doing.</h2>
-        </div>
-        <div>
-          <p class="lead">I’m based in Bangladesh and interested in performance-based digital marketing. I’m building my foundation in affiliate marketing, CPA campaign planning, search-focused content, and landing page design.</p>
-          <p style="color:var(--muted)">My goal is to understand the audience first, promote relevant offers responsibly, and use clear, useful content. I value transparency, continuous learning, and following each affiliate network’s promotional rules.</p>
-          <div class="note"><strong>Transparency:</strong> This website presents my learning, interests, and sample concepts. It does not claim unverified client work, campaign results, certifications, or earnings.</div>
-        </div>
+    <section id="about"><div class="wrap about-grid">
+      <div class="section-head"><div class="eyebrow">A little about me</div><h2>Learning with purpose. Building with care.</h2></div>
+      <div class="about-copy"><p>I’m based in Bangladesh and interested in performance-based digital marketing. I’m developing a strong foundation in affiliate marketing, CPA campaign planning, search-focused content, and landing page design.</p><p>I believe good marketing starts with understanding people: what they need, what questions they ask, and whether a product or offer genuinely fits. My focus is on clear communication, responsible promotion, and steady improvement.</p><div class="note"><strong>Transparency matters:</strong> This portfolio presents my interests, learning, and sample concepts. It does not claim unverified client work, campaign results, certifications, or earnings.</div></div>
+    </div></section>
+    <section id="skills"><div class="wrap"><div class="section-head"><div class="eyebrow">Skills & focus</div><h2>Areas I’m developing</h2><p>A practical foundation in the tools, thinking, and principles behind useful digital marketing.</p></div>
+      <div class="grid-3">
+        <article class="card"><div class="card-icon" aria-hidden="true">🎯</div><h3>Affiliate & CPA Fundamentals</h3><p>Learning offer types, publisher workflows, tracking concepts, and network requirements.</p><span class="tag">Foundational learning</span></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">⌕</div><h3>Audience Research</h3><p>Exploring audience needs, interests, search intent, and the relevance of a promotion.</p><span class="tag">Practice area</span></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">✍</div><h3>SEO & Content Planning</h3><p>Planning helpful content, clear headings, descriptive page structure, and basic on-page SEO.</p><span class="tag">Developing</span></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">▧</div><h3>Landing Page Concepts</h3><p>Designing focused page concepts with a clear value proposition and honest call to action.</p><span class="tag">Sample work</span></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">▥</div><h3>Performance Analysis</h3><p>Learning to interpret campaign metrics and evaluate outcomes when genuine data is available.</p><span class="tag">Learning</span></article>
+        <article class="card"><div class="card-icon" aria-hidden="true">✓</div><h3>Responsible Promotion</h3><p>Respecting offer terms, disclosure expectations, privacy, and permitted traffic sources.</p><span class="tag">Core principle</span></article>
       </div>
-    </section>
-
-    <section id="skills">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">Skills & focus areas</div>
-          <h2>Core areas I’m developing</h2>
-          <p>These are learning and practice areas—not claims of expert-level proficiency.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card"><div class="icon">🎯</div><h3>CPA & Affiliate Fundamentals</h3><p>Understanding offer types, publisher workflows, tracking concepts, and network requirements.</p><span class="tag">Foundational learning</span></article>
-          <article class="card"><div class="icon">🔎</div><h3>Audience Research</h3><p>Exploring audience needs, interests, search intent, and the relevance of a promotion.</p><span class="tag">Practice area</span></article>
-          <article class="card"><div class="icon">✍️</div><h3>SEO & Content</h3><p>Planning helpful content, clear page structure, descriptive headings, and basic on-page SEO.</p><span class="tag">Developing</span></article>
-          <article class="card"><div class="icon">🧩</div><h3>Landing Page Design</h3><p>Creating focused page concepts with a clear value proposition and appropriate call to action.</p><span class="tag">Sample work</span></article>
-          <article class="card"><div class="icon">📊</div><h3>Performance Analysis</h3><p>Learning to interpret campaign metrics and evaluate results when genuine data is available.</p><span class="tag">Learning</span></article>
-          <article class="card"><div class="icon">🛡️</div><h3>Responsible Promotion</h3><p>Respecting offer terms, disclosure expectations, privacy, and permitted traffic sources.</p><span class="tag">Principle</span></article>
-        </div>
+    </div></section>
+    <section id="projects"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected work</div><h2>Concepts with a clear purpose.</h2><p>Illustrative practice projects—not live campaigns or claims of proven results.</p></div>
+      <div class="grid-3">
+        <article class="card project-card"><div class="project-top"><span class="project-number">PROJECT 01</span><span class="project-type">Concept</span></div><h3>Educational Resource Landing Page</h3><p>A hypothetical landing page for a free digital-skills guide, designed around clarity and relevance.</p><ul><li>Define a relevant audience</li><li>Write a clear value proposition</li><li>Plan a transparent user journey</li></ul><span class="tag">Landing page planning</span></article>
+        <article class="card project-card"><div class="project-top"><span class="project-number">PROJECT 02</span><span class="project-type">Practice</span></div><h3>SEO Content Plan</h3><p>A sample editorial plan for readers who want to explore digital skills and online learning.</p><ul><li>Map topics to search intent</li><li>Outline useful articles</li><li>Plan relevant internal links</li></ul><span class="tag">Content strategy</span></article>
+        <article class="card project-card"><div class="project-top"><span class="project-number">PROJECT 03</span><span class="project-type">Practice</span></div><h3>Audience & Promotion Plan</h3><p>A planning framework for selecting an appropriate audience and permitted promotional channel.</p><ul><li>Research audience needs</li><li>Review offer and channel rules</li><li>Define useful review metrics</li></ul><span class="tag">Campaign planning</span></article>
       </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">Portfolio</div>
-          <h2>Selected concept projects</h2>
-          <p>These are illustrative practice concepts. They are not represented as live campaigns or proven results.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card project-card">
-            <div class="project-top"><span class="project-number">PROJECT 01</span><span class="chip">Concept</span></div>
-            <h3>Educational Resource Landing Page</h3>
-            <p>A hypothetical landing page for a free digital-skills guide.</p>
-            <ul><li>Define a relevant audience</li><li>Write a clear value proposition</li><li>Plan a transparent CTA and user journey</li></ul>
-            <span class="tag">Landing page planning</span>
-          </article>
-          <article class="card project-card">
-            <div class="project-top"><span class="project-number">PROJECT 02</span><span class="chip">Practice</span></div>
-            <h3>SEO Content Plan</h3>
-            <p>A sample editorial plan for readers exploring digital skills.</p>
-            <ul><li>Map topics to search intent</li><li>Outline helpful articles</li><li>Plan relevant internal links</li></ul>
-            <span class="tag">Content strategy</span>
-          </article>
-          <article class="card project-card">
-            <div class="project-top"><span class="project-number">PROJECT 03</span><span class="chip">Practice</span></div>
-            <h3>Audience & Promotion Plan</h3>
-            <p>A framework for choosing a suitable audience and permitted promotional channel.</p>
-            <ul><li>Research audience needs</li><li>Check offer and channel rules</li><li>Define metrics to review</li></ul>
-            <span class="tag">Campaign planning</span>
-          </article>
-        </div>
+    </div></section>
+    <section id="approach"><div class="wrap"><div class="section-head"><div class="eyebrow">My process</div><h2>Research first. Improve continuously.</h2><p>A simple, responsible workflow for shaping a marketing concept.</p></div>
+      <div class="steps"><article class="step"><h3>Research</h3><p>Understand the audience, their needs, and the intent behind their searches.</p></article><article class="step"><h3>Match</h3><p>Check whether an offer is relevant and allowed for the intended channel.</p></article><article class="step"><h3>Create</h3><p>Prepare useful content and a clear, honest landing page experience.</p></article><article class="step"><h3>Evaluate</h3><p>Review real analytics when available, then learn and improve.</p></article></div>
+    </div></section>
+    <section id="contact"><div class="wrap"><div class="contact-panel">
+      <div><div class="eyebrow">Get in touch</div><h2>Have a good idea?<br><span class="gradient-text">Let’s connect.</span></h2><p>For professional enquiries, learning opportunities, or conversations about digital marketing, feel free to reach out.</p></div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:haqueyousuf206@gmail.com" aria-label="Email Yousuf Haque at haqueyousuf206@gmail.com"><span class="contact-icon" aria-hidden="true">✉</span><span class="contact-meta"><span class="contact-label">Email me</span><span class="contact-value">haqueyousuf206@gmail.com</span></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-link" href="https://t.me/haque206" target="_blank" rel="noopener noreferrer" aria-label="Message Yousuf Haque on Telegram at haque206"><span class="contact-icon" aria-hidden="true">✈</span><span class="contact-meta"><span class="contact-label">Message on Telegram</span><span class="contact-value">@haque206</span></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
       </div>
-    </section>
-
-    <section id="approach">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">My approach</div>
-          <h2>Research first. Promote responsibly.</h2>
-          <p>A simple process I use when planning a marketing concept.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><h3>Research</h3><p>Understand the audience, their needs, and search intent.</p></div>
-          <div class="step"><h3>Match</h3><p>Consider whether an offer is relevant and permitted for the channel.</p></div>
-          <div class="step"><h3>Create</h3><p>Prepare useful content and a clear, honest landing page.</p></div>
-          <div class="step"><h3>Evaluate</h3><p>Review real analytics when available; learn and improve without inventing results.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <div class="contact-box">
-          <div>
-            <div class="eyebrow">Contact</div>
-            <h2>Let’s connect professionally.</h2>
-            <p>For legitimate affiliate marketing discussions, collaboration, or portfolio inquiries.</p>
-            <p style="margin-top:10px">
-              <strong>Telegram:</strong>
-              <a href="https://t.me/haque206" target="_blank" rel="noopener noreferrer">@haque206</a>
-            </p>
-            <p style="margin-top:10px">
-              <strong>Email:</strong>
-              <a href="mailto:haqueyousuf206@gmail.com">haqueyousuf206@gmail.com</a>
-            </p>
-          </div>
-          <a class="btn btn-primary" href="https://t.me/haque206" target="_blank" rel="noopener noreferrer">Message me on Telegram ↗</a>
-        </div>
-      </div>
-    </section>
+    </div></div></section>
   </main>
-
-  <footer>
-    <div class="wrap foot">
-      <span>© <span id="year"></span> Yousuf Haque · Digital Marketing Portfolio</span>
-      <span>Built with transparency and a learning mindset.</span>
-    </div>
-  </footer>
-
+  <footer><div class="wrap footer-row"><span>© <span id="year"></span> <strong>Yousuf Haque</strong> · Digital Marketing Portfolio</span><span>Built with curiosity, clarity, and transparency.</span></div></footer>
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const nav = document.getElementById('mainNav');
     menuBtn.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     });
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Open navigation menu');
+    }));
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
